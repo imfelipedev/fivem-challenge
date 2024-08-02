@@ -65,10 +65,6 @@ function Statistic:onPlayerHit(playerID, data)
         return false 
     end
 
-    -- if not self.bodypart[weapon] then 
-    --     return false 
-    -- end
-
     local targetEntity = NetworkGetEntityFromNetworkId(data.hitGlobalId)
     if not IsPedAPlayer(targetEntity) then 
         return false 
