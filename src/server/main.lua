@@ -33,7 +33,7 @@ function Statistic:getPlayerStat(playerData, targetID)
     return playerData[targetID]
 end
 
-function Statistic:updatePlayerData(playerID, value)
+function Statistic:updatePlayerStat(playerID, value)
     local playerData = self:getPlayerData(playerID)
     if not playerData then 
         return false 
@@ -70,7 +70,7 @@ function Statistic:onPlayerHit(playerID, data)
         return false 
     end
 
-	local targetID = NetworkGetEntityOwner(targetEntity)
+    local targetID = NetworkGetEntityOwner(targetEntity)
     if not targetID then
         return false 
     end
